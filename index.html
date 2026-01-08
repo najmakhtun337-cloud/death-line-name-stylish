@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>DEATH LINE NAME STYLISH</title>
+
+<style>
+:root{
+  --neon:#00ff9c;
+  --bg:#000;
+}
+
+*{
+  box-sizing:border-box;
+}
+
+body{
+  margin:0;
+  min-height:100vh;
+  background:var(--bg);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-family:"Courier New", monospace;
+  color:var(--neon);
+}
+
+.container{
+  width:360px;
+  padding:22px;
+  border:2px solid var(--neon);
+  box-shadow:0 0 15px var(--neon),0 0 35px rgba(0,255,156,.5);
+}
+
+.title{
+  text-align:center;
+  font-size:20px;
+  letter-spacing:2px;
+  margin-bottom:20px;
+}
+
+.label{
+  font-size:12px;
+  opacity:.8;
+  margin-bottom:6px;
+}
+
+input{
+  width:100%;
+  padding:10px;
+  background:transparent;
+  border:1px solid var(--neon);
+  color:var(--neon);
+  outline:none;
+  margin-bottom:15px;
+}
+
+.style-box{
+  border:1px dashed var(--neon);
+  padding:10px;
+  margin-bottom:10px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.style-text{
+  font-size:14px;
+  word-break:break-all;
+}
+
+.copy-btn{
+  background:transparent;
+  border:1px solid var(--neon);
+  color:var(--neon);
+  padding:4px 6px;
+  cursor:pointer;
+}
+
+.copy-btn:hover{
+  background:var(--neon);
+  color:#000;
+}
+
+.footer{
+  margin-top:12px;
+  text-align:center;
+  font-size:11px;
+  opacity:.6;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+  <div class="title">DEATH LINE<br>NAME STYLISH</div>
+
+  <div class="label">ENTER NAME :</div>
+  <input type="text" id="name" value="DEATH LINE" oninput="generate()">
+
+  <div class="style-box"><span class="style-text" id="s1"></span><button class="copy-btn" onclick="copyText('s1')">⧉</button></div>
+  <div class="style-box"><span class="style-text" id="s2"></span><button class="copy-btn" onclick="copyText('s2')">⧉</button></div>
+  <div class="style-box"><span class="style-text" id="s3"></span><button class="copy-btn" onclick="copyText('s3')">⧉</button></div>
+  <div class="style-box"><span class="style-text" id="s4"></span><button class="copy-btn" onclick="copyText('s4')">⧉</button></div>
+  <div class="style-box"><span class="style-text" id="s5"></span><button class="copy-btn" onclick="copyText('s5')">⧉</button></div>
+  <div class="style-box"><span class="style-text" id="s6"></span><button class="copy-btn" onclick="copyText('s6')">⧉</button></div>
+  <div class="style-box"><span class="style-text" id="s7"></span><button class="copy-btn" onclick="copyText('s7')">⧉</button></div>
+  <div class="style-box"><span class="style-text" id="s8"></span><button class="copy-btn" onclick="copyText('s8')">⧉</button></div>
+
+  <div class="footer">DH NAME STYLER v1.0</div>
+</div>
+
+<script>
+function generate(){
+  const n=document.getElementById("name").value || "";
+
+  document.getElementById("s1").innerText=n.split("").join(" ");
+  document.getElementById("s2").innerText=n;
+  document.getElementById("s3").innerText="『 "+n.replace(/./g,c=>c+" ")+"』";
+  document.getElementById("s4").innerText="☠︎ "+n+" ☠︎";
+  document.getElementById("s5").innerText="ＤＥＡＴＨ＿ＬＩＮＥ";
+  document.getElementById("s6").innerText="⚠️ "+n.replace(/A/g,"Λ").replace(/E/g,"Ξ")+" ⚠️";
+  document.getElementById("s7").innerText="🩸 "+n+" 🩸";
+  document.getElementById("s8").innerText="𝙲𝚔 - 𝕖𝕣𝕣𝕠𝕣𒌒 ʰᵃᶜᵏᵉ";
+}
+
+function copyText(id){
+  navigator.clipboard.writeText(
+    document.getElementById(id).innerText
+  );
+}
+
+generate();
+</script>
+
+</body>
+</html>
